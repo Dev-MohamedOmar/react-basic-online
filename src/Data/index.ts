@@ -1,5 +1,5 @@
 // import { v4 as uuid } from "uuid";
-import { IProduct } from "../interfaces";
+import { IFormInput, IProduct } from "../interfaces";
 
 export const productList: IProduct[] = [
     {
@@ -97,5 +97,32 @@ export const productList: IProduct[] = [
             name: "car",
             imageURL: "https://hips.hearstapps.com/hmg-prod/images/honda-prelude-concept-front-three-quarters-653927960f1f4.jpg?crop=1.00xw:0.920xh;0,0.0801xh&resize=980:*",
         },
+    },
+]
+
+export const formInputsList: IFormInput[] = [
+    {
+        id: "title",
+        name: "title",
+        label: "Product Title",
+        type: "text",
+    },
+    {
+        id: "description",
+        name: "description",
+        label: "Product Description",
+        type: "text",
+    },
+    {
+        id: "image",
+        name: "imageURL",
+        label: "Product Image URL",
+        type: "text",
+    },
+    {
+        id: "price",
+        name: "price",
+        label: "Product Price",
+        type: "text",
     },
 ]
