@@ -2,7 +2,6 @@
 
 export const productValidation = (product: { title: string, description: string, imageURL: string, price: string }) => {
     // ** Returns an object
-
     const error: { title: string, description: string, imageURL: string, price: string } = {
         title: "",
         description: "",
@@ -11,7 +10,7 @@ export const productValidation = (product: { title: string, description: string,
     };
 
     // ** Regular Expression
-    const validUrl = /(ftp|http|https):\/\/[" "]+$/.test(product.imageURL);
+    const validUrl = /^(ftp|http|https):\/\/[^ "]+$/.test(product.imageURL);
 
     if (!product.title.trim() || product.title.length < 10 || product.title.length > 80) {
         error.title = "Product title must be between 10 and 80 characters!";
